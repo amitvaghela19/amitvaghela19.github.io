@@ -1,0 +1,65 @@
+.wrap {
+  max-width: 800px;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.panel h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+}
+
+.panel p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.hint {
+  margin-top: 0.35rem !important;
+  font-size: 0.9rem;
+}
+
+.panel .btn {
+  margin-left: auto;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  display: grid;
+  gap: 0.65rem;
+}
+
+code {
+  font-size: 0.85em;
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .panel .btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}

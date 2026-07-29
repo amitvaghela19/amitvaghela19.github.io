@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1118"/>
+      <stop offset="1" stop-color="#151a24"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 80) rotate(90) scale(280 320)">
+      <stop stop-color="#fbbf24" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect width="800" height="500" fill="url(#r)"/>
+  <rect x="48" y="48" width="704" height="404" rx="24" stroke="#fbbf24" stroke-opacity="0.35" fill="#11151c" fill-opacity="0.55"/>
+  <circle cx="120" cy="140" r="28" fill="#92400e"/>
+  <circle cx="120" cy="140" r="14" fill="#fbbf24"/>
+  <rect x="180" y="118" width="220" height="14" rx="7" fill="#fbbf24" fill-opacity="0.85"/>
+  <rect x="180" y="148" width="160" height="10" rx="5" fill="#9aa6bd" fill-opacity="0.35"/>
+  <path d="M90 320 C180 250, 260 360, 350 290 C430 230, 500 340, 590 280 C650 245, 700 270, 720 250" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <text x="90" y="400" fill="#e8edf7" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="600">HUT8 Quant</text>
+  <text x="90" y="432" fill="#9aa6bd" font-family="Segoe UI, Arial, sans-serif" font-size="16">Amit Vaghela · Portfolio</text>
+</svg>

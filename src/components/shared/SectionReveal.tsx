@@ -1,0 +1,24 @@
+import { motion, useReducedMotion } from 'framer-motion'
+import type { ReactNode } from 'react'
+
+interface SectionRevealProps {
+  children: ReactNode
+  className?: string
+  delay?: number
+}
+
+export function SectionReveal({ children, className, delay = 0 }: SectionRevealProps) {
+  const reduce = useReducedMotion()
+
+  return (
+    <motion.div
+      className={className}
+      initial={reduce ? false : { opacity: 0, y: 28 }}
+      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5, delay, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  )
+}
