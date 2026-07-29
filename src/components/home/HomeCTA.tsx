@@ -12,7 +12,7 @@ export function HomeCTA() {
             <div>
               <h2 className={styles.title}>Let’s build the next data product</h2>
               <p className={styles.lead}>
-                Open to ML engineering, analytics, and full-stack AI roles — and selective freelance delivery.
+                Open to AI data analyst and analytics roles — and selective freelance delivery.
               </p>
             </div>
             <div className={styles.actions}>

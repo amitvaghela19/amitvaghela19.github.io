@@ -181,6 +181,14 @@
   font-size: 0.92rem;
 }
 
+.card li {
+  transition: color 0.25s ease;
+}
+
+.card li:hover {
+  color: var(--text);
+}
+
 @media (max-width: 960px) {
   .photoWrap {
     position: static;

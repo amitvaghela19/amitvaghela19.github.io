@@ -6,6 +6,38 @@ import { TypewriterRoles } from '../components/shared/TypewriterRoles'
 import { GithubIcon, LinkedinIcon } from '../components/shared/SocialIcons'
 import styles from './About.module.css'
 
+const aboutGridVariants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.08 },
+  },
+}
+
+const aboutCardVariants = {
+  hidden: { opacity: 0, y: 28, scale: 0.98 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut' as const,
+      delayChildren: 0.12,
+      staggerChildren: 0.045,
+    },
+  },
+}
+
+const aboutItemVariants = {
+  hidden: { opacity: 0, y: 10, filter: 'blur(4px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.35, ease: 'easeOut' as const },
+  },
+}
+
 export function About() {
   const reduce = useReducedMotion()
 
@@ -80,10 +112,10 @@ export function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.16 }}
             >
-              I design and ship forecasting systems, AI-powered analytics products, and agentic
-              workflows — from raw data through models to dashboards and deployable experiences.
-              The work centers on leakage-safe time series, explainable healthcare ML, brand
-              intelligence agents, and full-stack command centers for real operations.
+              I turn complex data into clear forecasts, dashboards, and AI-assisted insights that
+              stakeholders can act on. The work centers on leakage-safe time series analysis,
+              explainable healthcare analytics, brand intelligence workflows, and reporting that
+              connects the numbers to the business decision.
             </motion.p>
             <motion.p
               className={styles.copy}
@@ -91,8 +123,8 @@ export function About() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45, delay: 0.2 }}
             >
-              Alongside GitHub research systems, I deliver client-facing products such as the live
-              Shivam Children Hospital website — taking ideas from concept to production.
+              Alongside GitHub analytics projects, I deliver client-facing work such as the live
+              Shivam Children Hospital website — taking ideas from brief to a polished public site.
             </motion.p>
 
             <motion.ul
@@ -137,20 +169,34 @@ export function About() {
           </SectionReveal>
         </div>
 
-        <div className={styles.grid}>
-          {site.capabilities.map((group, i) => (
-            <SectionReveal key={group.title} delay={i * 0.04}>
-              <article className={styles.card}>
-                <h2>{group.title}</h2>
-                <ul>
-                  {group.items.map((item) => (
+        <motion.div
+          className={styles.grid}
+          variants={reduce ? undefined : aboutGridVariants}
+          initial={reduce ? false : 'hidden'}
+          whileInView={reduce ? undefined : 'show'}
+          viewport={{ once: true, margin: '-60px' }}
+        >
+          {site.capabilities.map((group) => (
+            <motion.article
+              key={group.title}
+              className={styles.card}
+              variants={reduce ? undefined : aboutCardVariants}
+            >
+              <h2>{group.title}</h2>
+              <ul>
+                {group.items.map((item) =>
+                  reduce ? (
                     <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-            </SectionReveal>
+                  ) : (
+                    <motion.li key={item} variants={aboutItemVariants}>
+                      {item}
+                    </motion.li>
+                  ),
+                )}
+              </ul>
+            </motion.article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )

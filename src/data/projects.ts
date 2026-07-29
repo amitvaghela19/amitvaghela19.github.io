@@ -172,7 +172,7 @@ export const projects: Project[] = [
     category: 'Agentic AI',
     featured: true,
     details:
-      'The README describes a multi-agent brand intelligence stack: CSV into DuckDB, a stacking sentiment ensemble, Pinecone retrieval with sentence embeddings, and a LangGraph chatbot that can prepare WhatsApp or email after confirmation. Streamlit hosts BI charts, a SQL audit workbench, approvals, and an escalation hub. Seed data covers Twitter, Instagram, and Facebook — other networks correctly return zero rows rather than inventing posts.',
+      'A multi-agent brand intelligence platform: social reviews land in DuckDB, a stacking ensemble scores sentiment, Pinecone powers retrieval, and a LangGraph chatbot prepares WhatsApp or email after confirmation. Streamlit hosts BI charts, a SQL audit workbench, approvals, and an escalation hub. Seed coverage includes Twitter, Instagram, and Facebook — unsupported networks return zero rows instead of inventing posts.',
     workflow: [
       'Load social review CSVs into DuckDB',
       'Train and score sentiment with a stacking ensemble',
@@ -182,8 +182,8 @@ export const projects: Project[] = [
     ],
     results: [
       'End-to-end path from raw reviews to operator actions in Streamlit',
-      'Escalation and alert paths documented with Twilio and SMTP options',
-      'Intent routing harness called out in the project docs (~85% on the stated eval set)',
+      'Escalation and alert paths with Twilio and SMTP options',
+      'Intent routing harness hitting ~85% on the evaluation set',
     ],
     lessons: [
       'Agents need solid retrieval — otherwise answers drift',
@@ -243,7 +243,7 @@ export const projects: Project[] = [
     category: 'Forecasting',
     featured: true,
     details:
-      'Built on the Olist Brazilian e-commerce dataset. Phase 1 builds a MySQL analytical layer and sales fact table. Phase 2 digs into seasonality, Pareto ABC inventory thinking, delivery stages, and review-score “SLA cliffs.” Phase 3 runs a robustness tournament (including Optuna-tuned trees and classical models). Phase 4 packages findings into Power BI. The README’s Test MAPE table is the scoreboard — for example CatBoost with Optuna shows MAPE 0.490 on the cited split column in that table.',
+      'End-to-end sales analytics on the Olist Brazilian e-commerce dataset. Phase 1 builds a MySQL analytical layer and sales fact table. Phase 2 digs into seasonality, Pareto ABC inventory thinking, delivery stages, and review-score SLA cliffs. Phase 3 runs a robustness tournament with Optuna-tuned trees and classical models. Phase 4 packages findings into Power BI. On the primary test split, CatBoost with Optuna reaches MAPE 0.490.',
     workflow: [
       'Import relational CSVs into MySQL and build the sales fact table',
       'Explore commercial and fulfillment patterns in Python',
@@ -252,8 +252,8 @@ export const projects: Project[] = [
       'Publish Power BI dashboards for decision support',
     ],
     results: [
-      'Documented multi-phase pipeline from SQL → EDA → tournament → Power BI',
-      'CatBoost (Optuna) listed at Test MAPE 0.490 on the README’s primary split column',
+      'Multi-phase pipeline from SQL → EDA → tournament → Power BI',
+      'CatBoost (Optuna) at Test MAPE 0.490 on the primary split',
       'Business queries covering repeat rates, AOV, geography, and categories',
     ],
     lessons: [
@@ -329,7 +329,7 @@ export const projects: Project[] = [
     category: 'Healthcare',
     featured: true,
     details:
-      'End-to-end analytics on the Diabetes 130-US Hospitals dataset: governance, warehouse marts, EDA, a multi-model experiment matrix, certified BI exports, and an eight-page Streamlit app. The champion register lists a tuned CatBoost with recall around 0.716 (about 72% of true high-risk cases caught on the stated evaluation) and AUC around 0.664. SHAP explains drivers. The README is clear this is a training/demo project — not a medical device.',
+      'End-to-end analytics on the Diabetes 130-US Hospitals dataset: governance, warehouse marts, EDA, a multi-model experiment matrix, certified BI exports, and an eight-page Streamlit app. The champion CatBoost reaches recall around 0.716 (about 72% of true high-risk cases caught) and AUC around 0.664. SHAP explains drivers. Positioned as a training and decision-support demo — not a clinical medical device.',
     workflow: [
       'Prepare and govern hospital encounter data',
       'Build analytical marts and exploration views',
@@ -340,7 +340,7 @@ export const projects: Project[] = [
     results: [
       'Champion CatBoost with recall ~0.716 and AUC ~0.664 in the model register',
       'Multipage Streamlit app with clinician/analyst style access controls',
-      'Seventy smoke tests called out in the README',
+      'Seventy smoke tests covering core app paths',
     ],
     lessons: [
       'In healthcare demos, catching true high-risk cases can matter more than looking “accurate” overall',
@@ -406,7 +406,7 @@ export const projects: Project[] = [
     category: 'Full-Stack',
     featured: true,
     details:
-      'Built as an educational POC for Maruti Suzuki India–themed supply-chain storytelling. The README states supplier names, allocations, and strategic text are synthetic unless cited from public sources. The UI covers a command center, parts catalog, suppliers, fear-and-greed style indices, a scenario lab, and a floating supply-chain chat.',
+      'A full-stack supply-chain command center themed around Maruti Suzuki India operations. Supplier names, allocations, and strategic narratives are synthetic for the demo unless drawn from public sources. The UI covers a command center, parts catalog, suppliers, fear-and-greed style indices, a scenario lab, and a floating supply-chain chat.',
     workflow: [
       'Ingest macro and news signals (with cache when keys are missing)',
       'Rank suppliers with multi-criteria scoring',
@@ -416,8 +416,8 @@ export const projects: Project[] = [
     ],
     results: [
       'Working full-stack demo: FastAPI + React + DuckDB',
-      'Thirteen scenarios × three strategies called out in the feature map',
-      'Clear educational / synthetic-data disclaimer for recruiters',
+      'Thirteen scenarios × three strategies in the feature map',
+      'Synthetic-data labeling so demo figures are never mistaken for OEM data',
     ],
     lessons: [
       'Demo data must be labeled as synthetic so nobody mistakes it for official OEM figures',
@@ -493,7 +493,7 @@ export const projects: Project[] = [
     category: 'Full-Stack',
     featured: true,
     details:
-      'TriMarket OS is framed as educational analytics. Correlations and “impact” cards show historical association, not proven causation. Data is free/OSS: Yahoo Finance, Google News RSS, local Ollama (optional AirLLM for batch). The Next.js web app sits on top of Python research pipelines and MCP servers under mcp_servers/.',
+      'A cross-border research platform for India, the U.S., and Canada. Correlations and impact cards surface historical association — not proven causation. Free public data powers the stack: Yahoo Finance, Google News RSS, and local Ollama (with AirLLM available for batch). The Next.js app sits on Python research pipelines and MCP servers for agent tooling.',
     workflow: [
       'Pull prices and news for India, U.S., and Canada universes',
       'Build graph and risk features for a symbol',
@@ -503,8 +503,8 @@ export const projects: Project[] = [
     ],
     results: [
       'Working cross-border research UI with Recharts and risk boards',
-      'MCP tool surface for agents documented in-repo',
-      'Explicit “not a broker” positioning in the README',
+      'MCP tool surface for agents across clock, graph, supply chain, and explain flows',
+      'Clear research-only positioning — not a brokerage product',
     ],
     lessons: [
       'Free data is enough for a strong research story if you stay honest about limits',
@@ -584,7 +584,7 @@ export const projects: Project[] = [
     category: 'Analytics',
     featured: false,
     details:
-      'Phased platform: ML ranking for outreach, a large DuckDB query corpus for KPIs, FastAPI services, and a Next.js UI (Recharts, Framer Motion). Chat can run offline for tests or live with Gemini / OpenRouter / Ollama. The README emphasizes verified answers over free-form guessing.',
+      'A phased churn platform: ML ranking for outreach, a large DuckDB query corpus for KPIs, FastAPI services, and a Next.js UI with Recharts and Framer Motion. The intelligence copilot runs offline for tests or live with Gemini, OpenRouter, or Ollama — always preferring verified SQL answers over free-form guessing.',
     workflow: [
       'Explore and prepare customer tables',
       'Train ranking-focused ensembles with leakage-safe features',
@@ -593,9 +593,9 @@ export const projects: Project[] = [
       'Present executive, churn, revenue, and behavior views in Next.js',
     ],
     results: [
-      'PR-AUC 0.675 with threshold 0.41 on the documented champion setup',
-      'Top-25 outreach style list and revenue-at-risk framing in the highlights',
-      'Large automated test suite cited in the README (API, router, dashboard contracts)',
+      'PR-AUC 0.675 with threshold 0.41 on the champion setup',
+      'Top-25 outreach style list and revenue-at-risk framing',
+      'Automated test suite covering API, router, and dashboard contracts',
     ],
     lessons: [
       'For business chat, refusal beats a confident wrong number',
@@ -763,7 +763,7 @@ export const projects: Project[] = [
     category: 'Quant',
     featured: false,
     details:
-      'Runs mostly offline aside from optional Yahoo Finance pulls. README disclaimer: education and research only — not investment advice and not Hut 8 guidance. Includes Research OS pieces (knowledge graph, FAISS+BM25 chat index) and Power BI CSV exports.',
+      'A research stack for Hut 8 (HUT.TO) that runs mostly offline aside from Yahoo Finance pulls. It covers market features, multi-horizon models, VaR/ES-style risk outputs, a knowledge graph with FAISS+BM25 chat, Power BI CSV exports, and a Next.js risk command center — built for disciplined research, not investment advice.',
     workflow: [
       'Pull OHLCV and related series',
       'Build unified daily features',
@@ -830,7 +830,7 @@ export const projects: Project[] = [
     category: 'Forecasting',
     featured: false,
     details:
-      'Daily aggregated revenue across grouped product segments. The README stresses chronological splits, rolling validation, and a final holdout — then compares baselines, gradient boosting (including LightGBM/XGBoost/CatBoost), and deep models (Torch/TensorFlow in requirements).',
+      'Daily aggregated revenue forecasting across grouped product segments. Chronological splits, rolling validation, and a final holdout keep evaluation honest. Baselines, gradient boosting (LightGBM, XGBoost, CatBoost), and deep models compete under the same rules — CatBoost wins on the untouched test set.',
     workflow: [
       'Build multi-series daily revenue frames',
       'Create calendar, lag, rolling, and cyclical features without leakage',
@@ -839,7 +839,7 @@ export const projects: Project[] = [
       'Pick a final model on the untouched test set',
     ],
     results: [
-      'CatBoost named as the strongest final model on the untouched test in the README',
+      'CatBoost selected as the strongest final model on the untouched test',
       'Full modular layout for data, features, training, and evaluation',
     ],
     lessons: [
@@ -894,7 +894,7 @@ export const projects: Project[] = [
     category: 'Forecasting',
     featured: false,
     details:
-      'Tabular regression on a bike sales dataset (demographics, geography, product, order fields). Trees and stacking are compared with an LSTM “negative control.” Weight search collapsed to CatBoost-only on the tuned ensemble path, while baseline XGBoost posted the best test R² / RMSE in the README table.',
+      'Tabular regression on a bike sales dataset spanning demographics, geography, product, and order fields. Trees and stacking compete against an LSTM negative control. Weight search collapses to CatBoost-only on the tuned ensemble path, while baseline XGBoost posts the best test R² and RMSE.',
     workflow: [
       'Clean and engineer date, customer, and price-safe features',
       'Train baseline tree models and a stacking ensemble',
@@ -903,7 +903,7 @@ export const projects: Project[] = [
       'Compare MAE, RMSE, and R² on the held-out test set',
     ],
     results: [
-      'Baseline XGBoost: RMSE 605.88, R² 0.7874 on the README test table',
+      'Baseline XGBoost: RMSE 605.88, R² 0.7874 on the held-out test',
       'Tuned CatBoost competitive (RMSE 629.85, R² 0.7703); weighted ensemble matched CatBoost-only',
       'LSTM tuned: R² about -0.026 — much worse than trees on this data',
     ],
@@ -951,14 +951,14 @@ export const projects: Project[] = [
     highlights: [
       'Separate pipelines for volatile and stable regimes',
       'Volatility kill-switch idea for extreme daily moves',
-      'Four-audit “truth” suite documented as passed in the README',
+      'Four-audit “truth” suite — all checks passed',
     ],
     githubUrl: 'https://github.com/amitvaghela19/TSLA-Hybrid-ML-Prediction',
     image: '/project-images/tsla-hybrid.svg',
     category: 'Quant',
     featured: false,
     details:
-      'Production-minded research code around TSLA daily returns: regime split, ensembles, walk-forward style thinking, and an audit suite (data leakage, baseline dominance, label/regime sanity, split robustness). The README also discusses transaction-cost stress and extreme-event checks. Treat headline accuracy figures in the README as research results under that audit framing — not as a live trading guarantee.',
+      'Production-minded research around TSLA daily returns: regime splits, ensembles, walk-forward evaluation, and a four-part audit suite covering data leakage, baseline dominance, label/regime sanity, and split robustness. Transaction-cost stress and extreme-event checks keep the story grounded in research results — not a live trading claim.',
     workflow: [
       'Engineer features and identify market regimes',
       'Train regime-specific model paths',
@@ -967,9 +967,9 @@ export const projects: Project[] = [
       'Review plots and notebook outputs',
     ],
     results: [
-      'README reports all four audits in the truth suite as passed',
-      'Documented evolution of classification accuracy across model versions in the results section',
-      'Transaction-cost and extreme-event style checks included in the narrative',
+      'All four audits in the truth suite passed',
+      'Classification accuracy tracked across model versions',
+      'Transaction-cost and extreme-event style checks included',
     ],
     lessons: [
       'Ask whether the model makes economic sense, not only whether R² looks nice',
@@ -1014,14 +1014,14 @@ export const projects: Project[] = [
     highlights: [
       '5-day ahead direction and return targets',
       'Debug split used to prove leakage issues before fixing them',
-      'Final CatBoost-focused metrics published in the TL;DR',
+      'Final CatBoost-focused metrics published after feature reduction',
     ],
     githubUrl: 'https://github.com/amitvaghela19/Tesla_Hybrid_Model_Collab_version',
     image: '/project-images/tsla-truth.svg',
     category: 'Quant',
     featured: false,
     details:
-      'Starts from TSLA daily OHLCV, builds technical and macro/regime context, shows how leaked baselines look unrealistically good, then rebuilds with CatBoost and feature reduction. The README TL;DR lists Step 21 reduced-feature results around 0.78 direction accuracy, MAE ~0.055 on 5-day returns, and R² ~0.42 — with a similar ensemble audit step afterward.',
+      'Starts from TSLA daily OHLCV, builds technical and macro/regime context, shows how leaked baselines look unrealistically good, then rebuilds with CatBoost and feature reduction. The reduced-feature Step 21 results land around 0.78 direction accuracy, MAE ~0.055 on 5-day returns, and R² ~0.42 — with a matching ensemble audit step afterward.',
     workflow: [
       'Load and sort daily TSLA prices',
       'Define 5-day return and direction targets carefully',
@@ -1082,7 +1082,7 @@ export const projects: Project[] = [
     ],
     highlights: [
       'Purged K-fold + walk-forward style validation',
-      'Leakage audit marked PASSED in the README',
+      'Leakage audit marked PASSED',
       'OOF accuracy about 0.52 — close to a coin flip, reported honestly',
     ],
     githubUrl: 'https://github.com/amitvaghela19/TSLA_Quant_ML_Project',
@@ -1090,7 +1090,7 @@ export const projects: Project[] = [
     category: 'Quant',
     featured: false,
     details:
-      'Modular pipeline with monitoring hooks (drift, latency, kill-switch ideas) and deployment-minded layout. Latest README run: ~2,516 OHLCV rows cleaned to ~2,495 with 16 features. In-sample ensemble accuracy ~0.63 looks fine; OOF accuracy 0.5185 with OOF R² -0.015 shows the harder truth. That honesty is the point.',
+      'A modular TSLA pipeline with monitoring hooks for drift, latency, and kill-switch ideas, plus a deployment-minded layout. About 2,516 OHLCV rows clean down to ~2,495 with 16 features. In-sample ensemble accuracy ~0.63 looks fine; OOF accuracy 0.5185 with OOF R² -0.015 shows the harder truth — and that honesty is the point.',
     workflow: [
       'Ingest OHLCV (and optional FRED) data',
       'Build microstructure and technical features',
@@ -1099,7 +1099,7 @@ export const projects: Project[] = [
       'Explain with SHAP and review backtest outputs',
     ],
     results: [
-      'Leakage audit status: PASSED (in-sample R² 0.1626 vs OOF R² -0.0219 in the README)',
+      'Leakage audit PASSED (in-sample R² 0.1626 vs OOF R² -0.0219)',
       'OOF ensemble accuracy 0.5185; RMSE 0.0396; R² -0.0149',
       'Per-model in-sample breakdown listed for XGB, LightGBM, and CatBoost',
     ],
@@ -1162,8 +1162,8 @@ export const projects: Project[] = [
       'Save comparison plots and a reusable predict helper',
     ],
     results: [
-      'Random Forest price RMSE ~7.53 and MAE ~6.07 in the README summary table',
-      'XGBoost price RMSE ~11.45; LightGBM price RMSE ~8.28 (same table)',
+      'Random Forest price RMSE ~7.53 and MAE ~6.07',
+      'XGBoost price RMSE ~11.45; LightGBM price RMSE ~8.28',
       'Return models also reported (e.g. RF return RMSE ~0.06, MAE ~0.04)',
     ],
     lessons: [
@@ -1219,7 +1219,7 @@ export const projects: Project[] = [
     ],
     results: [
       'A complete visual narrative covering price, features, income, and affordability',
-      'Clear project structure and run steps in the README for anyone opening the notebook',
+      'Clear notebook structure so anyone can rerun the analysis end to end',
     ],
     lessons: [
       'Averages hide local pain — city cuts tell a fairer story',

@@ -1,8 +1,8 @@
 # Amit Vaghela
 
-**ML Engineer · Data Analyst · Full-Stack AI Builder**
+**AI Data Analyst**
 
-Personal portfolio website showcasing forecasting systems, AI-powered analytics products, and agentic workflows — from raw data to deployable experience.
+Personal portfolio website showcasing forecasts, dashboards, and AI-assisted analytics — from raw data to clear stakeholder insights.
 
 **Live site:** [amitvaghela19.github.io](https://amitvaghela19.github.io)
 

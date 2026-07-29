@@ -2,7 +2,7 @@
 
 Build a production-quality personal portfolio website for **Amit Vaghela** using **React + Vite** and deploy it to **GitHub Pages** through **GitHub Actions**. The GitHub Pages repository is already set to `amitvaghela19.github.io`, and GitHub Pages has already been switched to **GitHub Actions** as the publishing source.[1][2]
 
-The portfolio is not a generic developer site. It must position Amit as an **ML Engineer, Data Analyst, and Full-Stack AI Builder** with strong emphasis on forecasting systems, agentic AI workflows, end-to-end ML projects, and recruiter-friendly project storytelling.[3]
+The portfolio is not a generic developer site. It must position Amit as an **AI Data Analyst** with strong emphasis on forecasts, dashboards, AI-assisted insights, analytics storytelling, and recruiter-friendly project storytelling.[3]
 
 ## Objective
 
@@ -87,17 +87,17 @@ Build the homepage with these sections in order:
 5. About snapshot
 6. CTA / Contact footer
 
-Hero copy direction should present Amit as someone who builds forecasting systems, LLM applications, agentic workflows, and data products. Avoid weak phrases such as “fast learner” or generic self-description, because that weakens positioning compared with his actual technical background.[5][3]
+Hero copy direction should present Amit as an AI Data Analyst who turns data into forecasts, dashboards, and AI-assisted insights. Avoid weak phrases such as “fast learner” or generic self-description, because that weakens positioning compared with his actual technical background.[5][3]
 
 Suggested headline pattern:
 - Amit Vaghela
-- ML Engineer · Data Analyst · Full-Stack AI Builder
-- Building forecasting systems, AI-powered analytics products, and agentic workflows from raw data to deployable experience.[10]
+- AI Data Analyst
+- Turning data into clear forecasts, dashboards, and AI-assisted insights stakeholders can act on.[10]
 
 ### 5. Skills presentation
 
 Do not build a giant icon wall. Group skills by capability instead:
-- Machine Learning
+- Applied ML for Analytics
 - Forecasting / Time Series
 - Data Engineering / ETL
 - LLM / Agentic AI
