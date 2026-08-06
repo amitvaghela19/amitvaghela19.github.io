@@ -11,8 +11,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  # Keep false so a newer run does not cancel an in-flight Pages deploy.
+  # Unique group name so older stuck "pages" runs cannot block new deploys.
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
