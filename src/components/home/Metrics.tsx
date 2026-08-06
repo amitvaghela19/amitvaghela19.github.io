@@ -26,7 +26,7 @@ function MetricValue({ value }: { value: string }) {
       return
     }
 
-    const duration = 1100
+    const duration = 2200
     const start = performance.now()
     let frame = 0
 

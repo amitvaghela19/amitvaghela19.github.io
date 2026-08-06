@@ -10,10 +10,6 @@ export function Resume() {
         <SectionReveal>
           <p className="section-eyebrow">Resume</p>
           <h1 className="section-title">Experience snapshot</h1>
-          <p className="section-lead">
-            Download the PDF resume, or scan the positioning below. Replace{' '}
-            <code>public/resume.pdf</code> anytime to update the downloadable file.
-          </p>
 
           <div className={styles.panel}>
             <div className={styles.icon}>

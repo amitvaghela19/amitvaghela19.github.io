@@ -5,6 +5,7 @@ import { Projects } from './pages/Projects'
 import { ProjectDetail } from './pages/ProjectDetail'
 import { About } from './pages/About'
 import { Resume } from './pages/Resume'
+import { Certifications } from './pages/Certifications'
 import { Contact } from './pages/Contact'
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="projects/:slug" element={<ProjectDetail />} />
           <Route path="about" element={<About />} />
           <Route path="resume" element={<Resume />} />
+          <Route path="certifications" element={<Certifications />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

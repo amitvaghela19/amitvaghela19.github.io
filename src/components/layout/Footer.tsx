@@ -16,6 +16,7 @@ export function Footer() {
           <Link to="/projects">Projects</Link>
           <Link to="/about">About</Link>
           <Link to="/resume">Resume</Link>
+          <Link to="/certifications">Certifications</Link>
           <Link to="/contact">Contact</Link>
         </div>
         <div className={styles.social}>
