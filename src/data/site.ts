@@ -10,7 +10,7 @@ export const site = {
   ],
   tagline:
     'Turning data into clear forecasts, dashboards, and AI-assisted insights stakeholders can act on.',
-  email: 'amitvaghela19@gmail.com',
+  email: 'amitmahendrabhaivaghela@gmail.com',
   github: 'https://github.com/amitvaghela19',
   linkedin: 'https://www.linkedin.com/in/amit-vaghela-436355102',
   resumePath: '/resume.pdf',
