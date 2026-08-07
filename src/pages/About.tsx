@@ -150,6 +150,9 @@ export function About() {
               <Link to="/resume" className="btn btn-ghost">
                 Resume
               </Link>
+              <Link to="/certifications" className="btn btn-ghost">
+                Certificates
+              </Link>
               <div className={styles.social}>
                 <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub">
                   <GithubIcon size={18} />
