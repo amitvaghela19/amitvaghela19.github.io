@@ -147,9 +147,6 @@ export function About() {
               <Link to="/projects" className="btn btn-primary">
                 See projects
               </Link>
-              <Link to="/resume" className="btn btn-ghost">
-                Resume
-              </Link>
               <Link to="/certifications" className="btn btn-ghost">
                 Certificates
               </Link>
