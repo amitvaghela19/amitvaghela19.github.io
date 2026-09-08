@@ -16,7 +16,6 @@ export function Footer() {
           <Link to="/projects">Projects</Link>
           <Link to="/about">About</Link>
           <Link to="/certifications">Certifications</Link>
-          <Link to="/contact">Contact</Link>
         </div>
         <div className={styles.social}>
           <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub">

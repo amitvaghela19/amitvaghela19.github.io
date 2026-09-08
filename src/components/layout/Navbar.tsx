@@ -8,7 +8,6 @@ const links = [
   { to: '/projects', label: 'Projects' },
   { to: '/about', label: 'About' },
   { to: '/certifications', label: 'Certifications' },
-  { to: '/contact', label: 'Contact' },
 ]
 
 export function Navbar() {

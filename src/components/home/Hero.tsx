@@ -52,8 +52,8 @@ export function Hero() {
             <Link to="/projects" className="btn btn-primary">
               View projects <ArrowRight size={16} />
             </Link>
-            <Link to="/contact" className="btn btn-ghost">
-              Contact
+            <Link to="/about" className="btn btn-ghost">
+              About
             </Link>
           </motion.div>
         </div>

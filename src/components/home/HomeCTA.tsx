@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { site } from '../../data/site'
 import { SectionReveal } from '../shared/SectionReveal'
 import styles from './HomeCTA.module.css'
@@ -16,9 +15,9 @@ export function HomeCTA() {
               </p>
             </div>
             <div className={styles.actions}>
-              <Link to="/contact" className="btn btn-primary">
+              <a className="btn btn-primary" href={`mailto:${site.email}`}>
                 Get in touch
-              </Link>
+              </a>
               <a href={site.github} className="btn btn-ghost" target="_blank" rel="noreferrer">
                 GitHub
               </a>
