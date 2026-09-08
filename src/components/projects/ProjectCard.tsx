@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
 import { motion } from 'framer-motion'
-import type { Project } from '../../data/projects'
+import { getProjectCategories, type Project } from '../../data/projects'
 import { GithubIcon } from '../shared/SocialIcons'
 import styles from './ProjectCard.module.css'
 
@@ -11,6 +11,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const categories = getProjectCategories(project)
+
   return (
     <motion.article
       className={styles.card}
@@ -22,7 +24,16 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
     >
       <Link to={`/projects/${project.slug}`} className={styles.media}>
         <img src={project.image} alt="" loading="lazy" />
-        <span className={`tag tag-accent ${styles.category}`}>{project.category}</span>
+        <div className={styles.categoryBadges}>
+          {categories.map((cat, i) => (
+            <span
+              key={cat}
+              className={`tag ${i === 0 ? 'tag-accent' : ''} ${styles.category}`}
+            >
+              {cat}
+            </span>
+          ))}
+        </div>
       </Link>
       <div className={styles.body}>
         <h3 className={styles.title}>

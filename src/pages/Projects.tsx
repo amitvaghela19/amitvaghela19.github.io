@@ -1,5 +1,10 @@
 import { useMemo, useState } from 'react'
-import { getAllProjects, getCategories, type ProjectCategory } from '../data/projects'
+import {
+  getAllProjects,
+  getCategories,
+  projectMatchesCategory,
+  type ProjectCategory,
+} from '../data/projects'
 import { ProjectGrid } from '../components/projects/ProjectGrid'
 import { SectionReveal } from '../components/shared/SectionReveal'
 import styles from './Projects.module.css'
@@ -10,7 +15,8 @@ export function Projects() {
   const [filter, setFilter] = useState<ProjectCategory | 'All'>('All')
 
   const visible = useMemo(
-    () => (filter === 'All' ? all : all.filter((p) => p.category === filter)),
+    () =>
+      filter === 'All' ? all : all.filter((p) => projectMatchesCategory(p, filter)),
     [all, filter],
   )
 

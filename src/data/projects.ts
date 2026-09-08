@@ -37,12 +37,35 @@ export interface Project {
   githubUrl?: string
   demoUrl?: string
   image: string
+  /** Primary badge / default filter membership */
   category: ProjectCategory
+  /** Extra filter chips this project should also appear under */
+  tags?: ProjectCategory[]
   featured: boolean
   details: string
   workflow: string[]
   results: string[]
   lessons: string[]
+}
+
+/** Primary category plus optional secondary tags (deduped, primary first). */
+export function getProjectCategories(project: Project): ProjectCategory[] {
+  const seen = new Set<ProjectCategory>()
+  const out: ProjectCategory[] = []
+  for (const c of [project.category, ...(project.tags ?? [])]) {
+    if (!seen.has(c)) {
+      seen.add(c)
+      out.push(c)
+    }
+  }
+  return out
+}
+
+export function projectMatchesCategory(
+  project: Project,
+  filter: ProjectCategory,
+): boolean {
+  return getProjectCategories(project).includes(filter)
 }
 
 function group(id: ToolkitGroupId, label: string, items: string[]): ToolkitGroup {
@@ -77,6 +100,7 @@ export const projects: Project[] = [
     demoUrl: 'https://www.shivamchildrenhospital.in/',
     image: '/project-images/shivam-hospital.svg',
     category: 'Freelance',
+    tags: ['Healthcare'],
     featured: true,
     details:
       'This is client work for Shivam Children Hospital. The public site walks visitors through care areas (including neonatal intensive care) and keeps the focus on clarity rather than flashy extras. It matters in a portfolio because it shows shipping for a real organization, not only research notebooks.',
@@ -1241,5 +1265,5 @@ export function getProjectBySlug(slug: string): Project | undefined {
 }
 
 export function getCategories(): ProjectCategory[] {
-  return [...new Set(projects.map((p) => p.category))]
+  return [...new Set(projects.flatMap((p) => getProjectCategories(p)))]
 }

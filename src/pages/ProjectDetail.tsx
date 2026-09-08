@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, ExternalLink } from 'lucide-react'
-import { getProjectBySlug } from '../data/projects'
+import { getProjectBySlug, getProjectCategories } from '../data/projects'
 import { SectionReveal } from '../components/shared/SectionReveal'
 import { GithubIcon } from '../components/shared/SocialIcons'
 import styles from './ProjectDetail.module.css'
@@ -23,6 +23,8 @@ export function ProjectDetail() {
     )
   }
 
+  const categories = getProjectCategories(project)
+
   return (
     <div className="page">
       <div className="container">
@@ -32,7 +34,13 @@ export function ProjectDetail() {
           </Link>
           <div className={styles.hero}>
             <div>
-              <span className="tag tag-accent">{project.category}</span>
+              <div className={styles.categoryRow}>
+                {categories.map((cat, i) => (
+                  <span key={cat} className={`tag ${i === 0 ? 'tag-accent' : ''}`}>
+                    {cat}
+                  </span>
+                ))}
+              </div>
               <h1 className={styles.title}>{project.title}</h1>
               <p className={styles.summary}>{project.summary}</p>
               <div className={styles.actions}>
